@@ -1,0 +1,257 @@
+:root {
+  --orange: #ef7662;
+  --purple: #5b4866;
+  --white60:  rgba(255, 255, 255, 0.60);
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  height: 100vh;
+  width: 100%;
+  font-family: "Poppins", sans-serif;
+  overflow: hidden;
+  background: linear-gradient(30deg, rgba(164, 56, 227, 0.65), rgba(178, 79, 61, 0.65)), url('../images/cover.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+/*Global CSS*/
+h1 {
+  font-size: 3rem;
+}
+img{
+  width: auto;
+  height: 100%;
+}
+li{
+  list-style-type: none;
+}
+a{
+  text-decoration: none;
+  color: var(--purple);
+}
+/*Global Section Close*/
+
+/* My common customize class */
+.container{
+  max-width: 1136px;
+  margin: 0 auto;
+  padding: 20px;
+}
+.flex {
+  display: flex;
+  gap: 20px;
+}
+.flex__column {
+  flex-direction: column;
+}
+.middle{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.orange{
+  color: var(--orange);
+}
+.purple{
+  color: var(--purple);
+}
+.shadow{
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+}
+/*Common Custom CSS end */
+
+/* Nav Bar design */
+.container{
+  height: 100%;
+}
+.header{
+  font-size: 1.25rem;
+  justify-content: space-between;
+  align-items: center;
+}
+.header .logo{
+  height: 70px;
+  width: auto;
+}
+.bordered {
+  border: 2px solid var(--purple);
+  background-color: var(--purple);
+  border-radius: 50px;
+  font-weight: 500;
+  padding: 5px 20px; 
+  color: white;
+  transition: all 0.3s;
+}
+.bordered:hover{
+  background-color: rgba(255, 255, 255, 0.3);
+  color: var(--purple);
+}
+
+/* Main body design */
+.body__wrapper{
+  flex: 1;
+  justify-content: center;
+  margin-left: 10px;
+}
+.body__wrapper .title{
+  display: flex;
+}
+.title h1{
+  background-color: rgba(0, 0, 0, 0.7);
+  line-height: 1;
+}
+
+.button{
+  font-size: 1.25rem;
+  font-weight: 700;
+  padding: 10px 20px;
+  width: 15ch;
+  display: flex;
+  justify-content: center;
+  border: 2px solid var(--orange);
+  border-radius: 100px;
+  color: var(--orange);
+  background-color: rgba(0, 0, 0, 0.3);
+  transition: all 0.3s;
+}
+.button:hover{
+  background-color: var(--orange);
+  color: white;
+}
+/* Registration */
+.reg__card{
+  height: 80vh;
+  width: 70%;
+  gap: 0;
+  border-radius: 20px;
+  overflow: hidden;
+  
+}
+.left{
+  height: 100%;
+  width: 40%;
+  background-color: var(--white60);
+}
+.right{
+  height: 100%;
+  width: 60%;
+  background-color: white;
+}
+.logo
+{
+  height: 150px;
+}
+.reg__card h1{
+  text-align: center;
+  font-size: 2rem;
+  padding-top: 10px;
+}
+.login__message{
+  padding: 5px;
+  text-align: center;
+}
+.form__wrapper{
+  padding: 40px 20px 40px 20px;
+  height: 100%;
+  width: 100%;
+  justify-content: space-between;
+}
+.form__wrapper h2{
+  text-align: center;
+  padding-bottom: 20px;
+}
+form{
+  flex: 1;
+  justify-content: space-between;
+}
+.single__input{
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  padding-bottom: 10px;
+}
+.half{
+  display: flex;
+  gap: 10px;
+}
+.label__text{
+  color: var(--purple);
+}
+input, select{
+  width: 100%;
+  height: 35px;
+  text-indent: 10px;
+  border-radius: 8px;
+  border: 1px solid #5b48666a;
+}
+input[type="radio"],
+input[type="checkbox"]{
+  height: 16px;
+  width: 16px;
+}
+.half > .single__input{
+  width: 20%;
+}
+.id__number{
+  flex: 1;
+}
+.single__part{
+  transition: all 0.2s;
+}
+.single__part[visible="false"]{
+  display: none;
+}
+form button{
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+  outline: none;
+  border: 0;
+  align-self: center;
+  outline: none;
+  font-size: 1.2rem;
+  background-color: #5b48661f;
+  color: var(--purple);
+  cursor: pointer;
+}
+.next__button{
+  justify-content: center;
+}
+.next__button button[visible="false"]{
+  display: none;
+}
+#submit{
+  background-color: var(--orange);
+  width: 12ch;
+  border-radius: 50px;
+  color: white;
+  font-weight: 700;
+  transition: all 0.4s;
+}
+#submit:hover{
+  background-color: var(--purple);
+}
+
+/* Media */
+@media  screen and (max-width: 540px) {
+  /* Global */
+  h1{
+      font-size: 2rem;
+  }
+   /* Header */
+  .header{
+      font-size: 1rem;
+  }
+  .header .logo{
+      height: 40px;
+  }
+  .button{
+      font-size: 1rem;
+  }
+  
+}
